@@ -1,0 +1,112 @@
+{
+  "burgers" :
+  [
+  {
+    "name" : "Asian Salmon Burger",
+    "icon" : "asian_salmon_burger",
+    "price" : "55.70 Dh"
+  },
+  {
+    "name" : "Bean Burger",
+    "icon" : "bean_burger",
+    "price" : "45.00 Dh"
+  },
+  {
+    "name" : "Big Burger",
+    "icon" : "big_burger",
+    "price" : "45.00 Dh"
+  },
+  {
+    "name" : "Buffalo Burger",
+    "icon" : "buffalo_burger",
+    "price" : "43.65 Dh"
+  },
+  {
+    "name" : "Burger King",
+    "icon" : "burger_king",
+    "price" : "48.18 Dh"
+  },
+  {
+    "name" : "Cheese Burger",
+    "icon" : "cheese_burger",
+    "price" : "42.00 Dh"
+  },
+  {
+    "name" : "Chicken Burger",
+    "icon" : "chicken_burger",
+    "price" : "37.80 Dh"
+  },
+  {
+    "name" : "Double Cheese Burger",
+    "icon" : "double_cheese_burger",
+    "price" : "60.00 Dh"
+  },
+  {
+    "name" : "Veggie Burger",
+    "icon" : "veggie_burger",
+    "price" : "52.45 Dh"
+  }
+  ],
+  "fries" :
+  [{
+    "name" : "Frensh Fries",
+    "icon" : "french_fries",
+    "price" : "10.90 Dh"
+  },
+    {
+      "name" : "Ketchup",
+      "icon" : "ketchup",
+      "price" : "2.00 Dh"
+    },
+    {
+      "name" : "Mayonnaise",
+      "icon" : "mayonnaise",
+      "price" : "2.00 Dh"
+    },
+    {
+      "name" : "Mustard",
+      "icon" : "mustard",
+      "price" : "2 Dh"
+    }],
+  "drinks" :
+  [{
+    "name" : "Cocacola Classic",
+    "icon" : "classic_cocacola",
+    "price" : "10.00 Dh"
+  },
+    {
+      "name" : "Cocacola Zero",
+      "icon" : "cocacola_zero",
+      "price" : "11.55 Dh"
+    },
+    {
+      "name" : "Sprite",
+      "icon" : "sprite",
+      "price" : "12.00 Dh"
+    },
+    {
+      "name" : "Sprite Zero",
+      "icon" : "sprite_zero",
+      "price" : "13.50 Dh"
+    },
+    {
+      "name" : "Pepsi",
+      "icon" : "pepsi",
+      "price" : "15.00 Dh"
+    },
+    {
+      "name" : "Ice Lemon Tea",
+      "icon" : "ice_lemon_tea",
+      "price" : "25.30 Dh"
+    },
+    {
+      "name" : "Watermelon Smoothie",
+      "icon" : "watermelon_smoothie",
+      "price" : "29.70 Dh"
+    },
+    {
+      "name" : "Strawberry Smoothie",
+      "icon" : "strowberry_smoothie",
+      "price" : "37.45 Dh"
+    }]
+}
