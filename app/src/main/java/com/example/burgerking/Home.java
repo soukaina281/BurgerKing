@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,17 +30,31 @@ public class Home extends AppCompatActivity {
     ArrayList<HashMap<String, String>> burgersList = null;
     ArrayList<HashMap<String, String>> friesList = null;
     ArrayList<HashMap<String, String>> drinksList = null;
-    ImageView user;
+    ImageView user ,monpanier;
 
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        monpanier =findViewById(R.id.panier);
         user = findViewById(R.id.user);
         burgers = findViewById(R.id.burgersRecycler);
         fries = findViewById(R.id.friesRecycler);
         drinks = findViewById(R.id.drinksRecycler);
+
+        //creer un intent pour acceder au panier
+        monpanier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent panierInt = new Intent(getApplicationContext(), com.example.burgerking.panier.class);
+                startActivity(panierInt);
+            }
+        });
+
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset());
             JSONArray burgers = obj.getJSONArray("burgers");

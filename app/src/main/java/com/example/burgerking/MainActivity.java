@@ -1,39 +1,33 @@
 package com.example.burgerking;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.Button;
 
-import com.example.burgerking.Adapter.MealAdapter;
+import androidx.appcompat.app.AppCompatActivity;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
+import com.example.burgerking.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    public MainActivity() throws FileNotFoundException {
-    }
+    private Button mybutton;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(MainActivity.this, Home.class));
+        mybutton = (Button)findViewById(R.id.mybtn);
+        mybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myintent = new Intent(getApplicationContext(),SinIn.class);
+                startActivity(myintent);
+            }
+        });
 
     }
 }
