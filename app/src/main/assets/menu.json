@@ -45,6 +45,36 @@
     "name" : "Veggie Burger",
     "icon" : "veggie_burger",
     "price" : "52.45 Dh"
+  },
+  {
+    "name" : "Cajun Chickpea Burger",
+    "icon" : "cajun_chickpea_burger",
+    "price" : "41.20 Dh"
+  },
+  {
+    "name" : "Crispy Chicken Burger",
+    "icon" : "crispy_chicken_burger",
+    "price" : "55.16 Dh"
+  },
+  {
+    "name" : "Garlic Shrimp Burger",
+    "icon" : "garlic_shrim_burger",
+    "price" : "35.90 Dh"
+  },
+  {
+    "name" : "Mexican Burger",
+    "icon" : "mexican_burger",
+    "price" : "44.15 Dh"
+  },
+  {
+    "name" : "Miso Fish Burger",
+    "icon" : "miso_fish_burger",
+    "price" : "54.12 Dh"
+  },
+  {
+    "name" : "Schneller Beef Burger",
+    "icon" : "schneller_beef_burger",
+    "price" : " Dh"
   }
   ],
   "fries" :
@@ -53,21 +83,32 @@
     "icon" : "french_fries",
     "price" : "10.90 Dh"
   },
-    {
-      "name" : "Ketchup",
-      "icon" : "ketchup",
-      "price" : "2.00 Dh"
-    },
-    {
-      "name" : "Mayonnaise",
-      "icon" : "mayonnaise",
-      "price" : "2.00 Dh"
-    },
-    {
-      "name" : "Mustard",
-      "icon" : "mustard",
-      "price" : "2 Dh"
-    }],
+  {
+    "name" : "Medium French Fries",
+    "icon" : "medium_french_fries",
+    "price" : "15.00 Dh"
+  },
+  {
+    "name" : "Ketchup",
+    "icon" : "ketchup",
+    "price" : "2.00 Dh"
+  },
+  {
+    "name" : "Mayonnaise",
+    "icon" : "mayonnaise",
+    "price" : "2.00 Dh"
+  },
+  {
+    "name" : "Mustard",
+    "icon" : "mustard",
+    "price" : "2 Dh"
+  },
+  {
+    "name" : "White Sauce",
+    "icon" : "white_sauce",
+    "price" : "2 Dh"
+  }
+  ],
   "drinks" :
   [{
     "name" : "Cocacola Classic",
@@ -108,5 +149,26 @@
       "name" : "Strawberry Smoothie",
       "icon" : "strowberry_smoothie",
       "price" : "37.45 Dh"
-    }]
+    },
+    {
+      "name" : "Iced bubble tea",
+      "icon" : "iced_bubble_tea",
+      "price" : "40.00 Dh"
+    },
+    {
+      "name" : "Iced Cappuccino",
+      "icon" : "iced_cappuccino",
+      "price" : "18.45 Dh"
+    },
+    {
+      "name" : "Iced Coffee",
+      "icon" : "iced_coffee",
+      "price" : "25.00 Dh"
+    },
+    {
+      "name" : "Pop Fizz Clink",
+      "icon" : "pop_fizz_clink",
+      "price" : "38.90 Dh"
+    }
+  ]
 }
