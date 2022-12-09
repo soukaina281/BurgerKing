@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class menu extends AppCompatActivity {
+public class Menu extends AppCompatActivity {
 
     private ListView mListView;
     private RecyclerView burgers, fries, drinks;
@@ -128,7 +128,7 @@ public class menu extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(menu.this, UserDetails.class));
+                startActivity(new Intent(Menu.this, UserDetails.class));
             }
         });
     }

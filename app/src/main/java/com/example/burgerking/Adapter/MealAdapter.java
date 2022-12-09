@@ -1,9 +1,11 @@
 package com.example.burgerking.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -54,6 +56,7 @@ public class MealAdapter extends RecyclerView.Adapter {
         public final TextView name;
         public final TextView price;
         public final ImageView icon;
+        public final Button add;
 
         public ViewHolder(View view) {
             super(view);
@@ -61,6 +64,14 @@ public class MealAdapter extends RecyclerView.Adapter {
             name = view.findViewById(R.id.name);
             price = view.findViewById(R.id.price);
             icon = view.findViewById(R.id.icon);
+            add = view.findViewById(R.id.add);
+
+            add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.i("this", "onClick: done");
+                }
+            });
         }
     }
 
