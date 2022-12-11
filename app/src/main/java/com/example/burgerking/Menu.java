@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.burgerking.Adapter.MealAdapter;
+import com.example.burgerking.model.Meal;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -125,6 +126,8 @@ public class Menu extends AppCompatActivity {
         adapter3 = new MealAdapter(this, drinksList);
         drinks.setAdapter(adapter3);
 
+
+
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -147,4 +150,5 @@ public class Menu extends AppCompatActivity {
         }
         return json;
     }
+
 }
