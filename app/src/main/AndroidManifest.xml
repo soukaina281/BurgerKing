@@ -13,6 +13,13 @@
         android:theme="@style/Theme.BurgerKing"
         tools:targetApi="31">
         <activity
+            android:name=".productdetails"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".panier"
             android:exported="false">
             <meta-data
@@ -62,8 +69,8 @@
         </activity>
         <activity
             android:name=".Home"
-            android:windowSoftInputMode="stateVisible|adjustPan"
-            android:exported="false">
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustPan">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

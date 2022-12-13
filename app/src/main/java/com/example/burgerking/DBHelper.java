@@ -17,6 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase DB) {
         String queryString= "create Table user(id INTEGER PRIMARY KEY AUTOINCREMENT,username TEXT,email TEXT,phone INTEGER,password TEXT)";
         DB.execSQL(queryString);
+        //DB.execSQL("create table shoopingCart(name TEXT,price TEXT,image BLOB)");
     }
 
     @Override
@@ -53,4 +54,12 @@ public class DBHelper extends SQLiteOpenHelper {
         if(cursor.getCount() > 0) return true;
         else return false;
     }
+   /* public void AddshoopingCart(String name,String price,byte[] image){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues data= new ContentValues();
+        data.put("name",name);
+        data.put("price",price);
+        data.put("image",image);
+        db.insert("shoopingCart",null,data);
+    }*/
 }
