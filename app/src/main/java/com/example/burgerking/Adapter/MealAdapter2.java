@@ -18,11 +18,11 @@ import com.example.burgerking.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MealAdapter extends RecyclerView.Adapter {
+public class MealAdapter2 extends RecyclerView.Adapter {
     private ArrayList<HashMap<String, String>> meals;
     Context context;
 
-    public MealAdapter(Context context, ArrayList<HashMap<String, String>> meals){
+    public MealAdapter2(Context context, ArrayList<HashMap<String, String>> meals){
         this.context = context;
         this.meals = meals;
     }
@@ -30,16 +30,16 @@ public class MealAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = (View) LayoutInflater.from(parent.getContext()).inflate(R.layout.cart, parent, false);
-        return new ViewHolder(v);
+        View v = (View) LayoutInflater.from(parent.getContext()).inflate(R.layout.cart2, parent, false);
+        return new MealAdapter.ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int i) {
-        onBindViewHolder((ViewHolder) holder, i, true);
+        onBindViewHolder((MealAdapter.ViewHolder) holder, i, true);
     }
 
-    public void onBindViewHolder(@NonNull ViewHolder holder, int i, boolean b) {
+    public void onBindViewHolder(@NonNull MealAdapter.ViewHolder holder, int i, boolean b) {
         HashMap<String,String> meal = meals.get(i);
         holder.icon.setImageDrawable(ContextCompat.getDrawable(context, context.getResources().getIdentifier(meal.get("icon"), "drawable", context.getPackageName())));
         holder.name.setText(meal.get("name"));
@@ -74,5 +74,4 @@ public class MealAdapter extends RecyclerView.Adapter {
             });
         }
     }
-
 }

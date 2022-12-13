@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu">
+    tools:context=".Menu">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -66,7 +66,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/menu"
+                android:id="@+id/menu1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -88,7 +88,7 @@
                 android:text="Our Burgers"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/menu" />
+                app:layout_constraintTop_toBottomOf="@+id/menu1" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/burgersRecycler"
@@ -160,33 +160,33 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/menu"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:layout_constraintBottom_toTopOf="@+id/view1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/restaurant_menu"
-            app:layout_constraintEnd_toStartOf="@id/imageView2"/>
+            app:layout_constraintEnd_toStartOf="@id/home"/>
 
         <View
             android:id="@+id/view1"
             android:layout_width="40dp"
             android:layout_height="4dp"
             android:background="@color/white"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/menu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/view2"/>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/home"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:layout_constraintBottom_toTopOf="@+id/view2"
-            app:layout_constraintStart_toEndOf="@id/imageView"
+            app:layout_constraintStart_toEndOf="@id/menu"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imageView3"
+            app:layout_constraintEnd_toStartOf="@id/cart"
             app:srcCompat="@drawable/home" />
 
         <View
@@ -194,19 +194,19 @@
             android:layout_width="40dp"
             android:layout_height="4dp"
             android:background="@color/orange"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/view1"
             app:layout_constraintEnd_toStartOf="@+id/view3"/>
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/cart"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:layout_constraintBottom_toTopOf="@+id/view3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/home"
             app:srcCompat="@drawable/shopping_cart" />
 
         <View
@@ -214,7 +214,7 @@
             android:layout_width="40dp"
             android:layout_height="4dp"
             android:background="@color/orange"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/view2"
             app:layout_constraintEnd_toEndOf="parent"/>

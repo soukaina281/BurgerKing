@@ -30,12 +30,15 @@ public class Menu extends AppCompatActivity {
     ArrayList<HashMap<String, String>> friesList = null;
     ArrayList<HashMap<String, String>> drinksList = null;
     ImageView user;
+    ImageView home , cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        home = findViewById(R.id.home);
+        cart = findViewById(R.id.cart);
         user = findViewById(R.id.user);
         burgers = findViewById(R.id.burgersRecycler);
         fries = findViewById(R.id.friesRecycler);
@@ -125,6 +128,18 @@ public class Menu extends AppCompatActivity {
         adapter3 = new MealAdapter(this, drinksList);
         drinks.setAdapter(adapter3);
 
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Menu.this, Home.class));
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Menu.this, panier.class));
+            }
+        });
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

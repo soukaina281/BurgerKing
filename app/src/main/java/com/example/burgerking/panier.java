@@ -16,7 +16,9 @@ import java.util.ArrayList;
 
 public class panier extends AppCompatActivity {
     private RecyclerView list;
+    ImageView menu , home;
     ArrayList <produit> produitList = new ArrayList<>();
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -24,12 +26,23 @@ public class panier extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panier);
+
+        menu = findViewById(R.id.menu);
+        home = findViewById(R.id.home);
         list = findViewById(R.id.view);
         list.setLayoutManager(new LinearLayoutManager(this));
 
-
-
-
-
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(panier.this, Menu.class));
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(panier.this, Home.class));
+            }
+        });
     }
 }
