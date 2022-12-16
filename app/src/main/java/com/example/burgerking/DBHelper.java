@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.burgerking.model.User;
+
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBname = "Login.db";
@@ -53,6 +55,38 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("SELECT * from user where username= ? and password=?",new String[] {username,password});
         if(cursor.getCount() > 0) return true;
         else return false;
+    }
+    public User getUser(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM user WHERE username = ?", new String[]{email});
+        if(cursor != null){
+            cursor.moveToFirst();
+        }
+        return new User(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(4));
+    }
+    public void changeUserName(int id, String newName){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("username", newName);
+        db.update("user", values, "id = ?", new String[]{String.valueOf(id)});
+    }
+    public void changeUserEmail(int id, String newEmail){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("email", newEmail);
+        db.update("user", values, "id = ?", new String[]{String.valueOf(id)});
+    }
+    public Boolean changeUserPassword(int id, String oldPassword, String newPassword){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("password", newPassword);
+        long update = db.update("user", values, "id = ? AND password = ?", new String[]{String.valueOf(id), oldPassword});
+        if (update == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
    /* public void AddshoopingCart(String name,String price,byte[] image){
         SQLiteDatabase db = getWritableDatabase();
