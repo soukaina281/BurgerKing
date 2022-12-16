@@ -65,7 +65,20 @@ public class DBHelper extends SQLiteOpenHelper {
         else return false;
     }
 
+    public List<cartmodel> GetsoppingCart(Context cn){
 
+        List<cartmodel> data = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cart = db.rawQuery("select * from shoopingCart",null);
+        while(cart.moveToNext()){
+            cartmodel cr = new cartmodel();
+            cr.setName(cart.getString(0));
+            cr.setPrice(cart.getString(1));
+            cr.setImage(cart.getBlob(2));
+            data.add(cr);
+        }
+        return data;
+    }
 
    public void AddshoopingCart(String name,String price,byte[] image){
         SQLiteDatabase db = getWritableDatabase();
