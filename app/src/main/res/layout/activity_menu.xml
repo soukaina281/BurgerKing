@@ -199,6 +199,7 @@
             app:layout_constraintStart_toEndOf="@+id/view1"
             app:layout_constraintEnd_toStartOf="@+id/view3"/>
 
+
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="40dp"
@@ -208,6 +209,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:srcCompat="@drawable/shopping_cart" />
+
 
         <View
             android:id="@+id/view3"

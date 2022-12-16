@@ -24,7 +24,6 @@ public class productdetails extends AppCompatActivity {
    ImageView img,minus,plus;
    String pname,pprice;
    Button addtocart;
-   Meal meal ;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +63,7 @@ public class productdetails extends AppCompatActivity {
              }
            }
        });
-      /* addtocart.setOnClickListener(new View.OnClickListener() {
+     /*  addtocart.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
            DBHelper db= new DBHelper(productdetails.this);
