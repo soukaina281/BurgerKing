@@ -1,6 +1,5 @@
 package com.example.burgerking.Adapter;
 
-import static com.example.burgerking.Adapter.panierAdapter.produitHolder.img;
 
 import android.content.Context;
 import android.content.Intent;
@@ -34,6 +33,8 @@ import java.util.HashMap;
 public class MealAdapter extends RecyclerView.Adapter {
     public ArrayList<HashMap<String, String>> meals;
     public static Context context;
+    public ImageView img;
+
 
 
     public MealAdapter(Context context, ArrayList<HashMap<String, String>> meals){
@@ -59,6 +60,8 @@ public class MealAdapter extends RecyclerView.Adapter {
         holder.name.setText(meal.get("name"));
         holder.price.setText(meal.get("price"));
 
+        img = holder.itemView.findViewById(R.id.icon);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,8 +75,26 @@ public class MealAdapter extends RecyclerView.Adapter {
             }
         });
 
+        holder.add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DBHelper db = new DBHelper(context);
+                Bitmap bb = ((BitmapDrawable)img.getDrawable()).getBitmap() ;
+                byte[] myimage = imgproduct(bb);
+                db.AddshoopingCart(meal.get("name"),meal.get("price"),myimage);
+                Toast.makeText(context,"Product has been save in shopping cart",Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
+
+
+    }
+    private byte[] imgproduct (Bitmap b){
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        b.compress(Bitmap.CompressFormat.PNG,0,bos);
+        return bos.toByteArray();
     }
 
     @Override
@@ -97,23 +118,16 @@ public class MealAdapter extends RecyclerView.Adapter {
             icon = view.findViewById(R.id.icon);
             add = view.findViewById(R.id.add);
 
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent myIntent = new Intent(context, productdetails.class);
-                    context.startActivity(myIntent);
 
-                }
-            });
 
 
            /* add.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    context.startActivity(new Intent(context, panier.class));
 
-                    //Log.i("this", "onClick: done");
+
+
                 }
             });*/
         }

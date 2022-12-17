@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.burgerking.Adapter.MealAdapter;
 
@@ -31,12 +33,24 @@ public class Menu extends AppCompatActivity {
     ArrayList<HashMap<String, String>> drinksList = null;
     ImageView user;
     ImageView home , cart;
+    TextView cartnombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+      /* cartnombre = findViewById(R.id.cartnombre);
+        DBHelper db =new DBHelper(Menu.this);
+        int count = db.countShoopingcart();
+        cartnombre.setText(String.valueOf(count));*/
+        imageView3 = findViewById(R.id.imageView3);
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity( new Intent(getApplicationContext(),panier.class));
+            }
+        });
         home = findViewById(R.id.home);
         cart = findViewById(R.id.cart);
         user = findViewById(R.id.user);
