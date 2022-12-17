@@ -82,7 +82,7 @@ public class MealAdapter extends RecyclerView.Adapter {
                 Bitmap bb = ((BitmapDrawable)img.getDrawable()).getBitmap() ;
                 byte[] myimage = imgproduct(bb);
                 db.AddshoopingCart(meal.get("name"),meal.get("price"),myimage);
-                Toast.makeText(context,"Product has been save in shopping cart",Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"Product has been save in shopping cart",Toast.LENGTH_LONG).show();
 
             }
         });
