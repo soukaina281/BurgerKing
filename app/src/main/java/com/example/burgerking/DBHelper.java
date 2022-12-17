@@ -97,8 +97,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-   //public void AddshoopingCart(String name,String price,byte[] image){
-
     public List<cartmodel> GetsoppingCart(Context cn){
 
         List<cartmodel> data = new ArrayList<>();
