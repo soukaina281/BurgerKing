@@ -1,7 +1,10 @@
 package com.example.burgerking;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,9 +15,7 @@ public class panier extends AppCompatActivity {
     private ListView list;
     DataAdapterCart adapterCart;
     DBHelper db = new DBHelper(this);
-    private RecyclerView list;
     ImageView menu , home;
-    ArrayList <produit> produitList = new ArrayList<>();
 
 
 

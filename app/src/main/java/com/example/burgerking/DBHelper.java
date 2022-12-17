@@ -11,6 +11,7 @@ import com.example.burgerking.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBname = "Login.db";
@@ -32,9 +33,6 @@ public class DBHelper extends SQLiteOpenHelper {
             DB.execSQL("drop table if exists shoopingCart");
             onCreate(DB);
         }
-
-
-
 
     }
     public Boolean insertData(String username,String email,int phone,String password){
@@ -98,7 +96,8 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
         }
     }
-   /* public void AddshoopingCart(String name,String price,byte[] image){
+
+   //public void AddshoopingCart(String name,String price,byte[] image){
 
     public List<cartmodel> GetsoppingCart(Context cn){
 
@@ -122,12 +121,6 @@ public class DBHelper extends SQLiteOpenHelper {
         data.put("price",price);
         data.put("image",image);
         db.insert("shoopingCart",null,data);
-    }
-   /* public int countShoopingcart(){
-        SQLiteDatabase db = getReadableDatabase();
+   }
 
-        Cursor cn = db.rawQuery("select * from shoopingCart",null);
-        cn.moveToFirst();
-        return cn.getCount();
-    }*/
 }
